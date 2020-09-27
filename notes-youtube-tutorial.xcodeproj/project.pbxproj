@@ -13,6 +13,8 @@
 		C2103CC825201B7700AF5411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2103CC725201B7700AF5411 /* Assets.xcassets */; };
 		C2103CCB25201B7700AF5411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2103CC925201B7700AF5411 /* LaunchScreen.storyboard */; };
 		C2103CD725201D7B00AF5411 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2103CD625201D7B00AF5411 /* HomeViewController.swift */; };
+		C2103CDC252025E100AF5411 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2103CDB252025E100AF5411 /* NoteViewController.swift */; };
+		C2103CDF2520298000AF5411 /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2103CDE2520298000AF5411 /* AddNoteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		C2103CCA25201B7700AF5411 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2103CCC25201B7700AF5411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2103CD625201D7B00AF5411 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C2103CDB252025E100AF5411 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		C2103CDE2520298000AF5411 /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				C2103CD625201D7B00AF5411 /* HomeViewController.swift */,
+				C2103CDB252025E100AF5411 /* NoteViewController.swift */,
+				C2103CDE2520298000AF5411 /* AddNoteController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2103CDC252025E100AF5411 /* NoteViewController.swift in Sources */,
+				C2103CDF2520298000AF5411 /* AddNoteController.swift in Sources */,
 				C2103CBF25201B7600AF5411 /* AppDelegate.swift in Sources */,
 				C2103CC125201B7600AF5411 /* SceneDelegate.swift in Sources */,
 				C2103CD725201D7B00AF5411 /* HomeViewController.swift in Sources */,

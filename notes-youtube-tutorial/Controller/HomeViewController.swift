@@ -8,33 +8,57 @@
 import UIKit
 
 class HomeViewController: UITableViewController {
-
+    
+    
+    var models: [(title: String, note: String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Notes"
+        tableView.rowHeight = 50
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return models.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTitleCell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = models[indexPath.row].title
+        cell.detailTextLabel?.text = models[indexPath.row].note
 
         return cell
     }
     
-    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
+        // Show note controller
         
+        guard let vc = storyboard?.instantiateViewController(identifier: "note") as? NoteViewController else {
+            return
+        }
+        
+        vc.title = "Note"
+        navigationController?.pushViewController(vc, animated: true)
         
     }
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? AddNoteController else {
+            return
+        }
+        
+        vc.title = "New Note"
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
 }
